@@ -7,12 +7,12 @@
 % MAB 03/2018
 
 %% Convenience variables
-projectName = 'LFContrastAnalysis';
-flywheelName = 'LFContrast';
+projectName = 'tome';
+flywheelName = 'tome';
 
 %% Analysis labels that we are going to go and get
-fmriprepLabel = 'fmriprep 04/12/2018 15:16:06';
-neuropythyLabel = 'retinotopy-templates 04/13/2018 16:46:22';
+fmriprepLabel = 'fmriprep 05/30/2018 09:12:36';
+% neuropythyLabel = 'retinotopy-templates 04/13/2018 16:46:22';
 
 %% Check for/make the project level directory
 projectDir = getpref('LFContrastAnalysis','projectRootDir');
@@ -72,22 +72,22 @@ system(cmd);
 
 
 %% Make Benson Gear (Neuropythy) directory
-bensonDir = fullfile(sessionDir,'neuropythy');
-if ~exist(bensonDir)
-    mkdir(bensonDir)
-end
-
-%% Download Benson Gear (Neuropythy) output
-clear fwInfo
-[fwInfo] = getAnalysisFromFlywheel(flywheelName,neuropythyLabel,bensonDir, 'verbose', false, 'searchDir', projectDir);
-
-%% Benson bookkeeping file
-%
-% freesurfer file
-cmd = ['echo -e "' 'This is a bookkeeping file.\nDo not delete unless you delete the whole analysis directory." > ' ...
-    fullfile(sessionDir,'neuropythy',[fwInfo.analysis_id '.txt'])];
-system(cmd);
-
+% bensonDir = fullfile(sessionDir,'neuropythy');
+% if ~exist(bensonDir)
+%     mkdir(bensonDir)
+% end
+% 
+% %% Download Benson Gear (Neuropythy) output
+% clear fwInfo
+% [fwInfo] = getAnalysisFromFlywheel(flywheelName,neuropythyLabel,bensonDir, 'verbose', false, 'searchDir', projectDir);
+% 
+% %% Benson bookkeeping file
+% %
+% % freesurfer file
+% cmd = ['echo -e "' 'This is a bookkeeping file.\nDo not delete unless you delete the whole analysis directory." > ' ...
+%     fullfile(sessionDir,'neuropythy',[fwInfo.analysis_id '.txt'])];
+% system(cmd);
+% 
 %% Clean Up
 % remove the unused files from the fmriprep download
 cmd = ['rm -rf ' fmriprepDir];
