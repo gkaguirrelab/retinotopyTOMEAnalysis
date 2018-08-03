@@ -42,13 +42,17 @@
 		"flavor": "",
 		"hook": "",
 		"importance": "",
+<<<<<<< HEAD
 		"localHookTemplate": "config/retinotopyTOMEAnalysis.m",
+=======
+		"localHookTemplate": "config/retinotopyTOMEAnalysisLocalHookTemplate.m",
+>>>>>>> ddb7015fd77a00d0af6fab5e2a12f1d54b2ed79f
 		"name": "retinotopyTOMEAnalysis",
 		"pathPlacement": "append",
-		"subfolder": ["toolbox","code"],
+		"subfolder": "",
 		"toolboxRoot": "",
 		"type": "git",
 		"update": "",
-		"url": "https://github.com/gkaguirrelab/LFContrastAnalysis.git"
+		"url": "https://github.com/gkaguirrelab/retinotopyTOMEAnalysis.git"
 	}	
 ]
